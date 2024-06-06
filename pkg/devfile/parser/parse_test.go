@@ -4735,7 +4735,7 @@ func Test_parseFromRegistry(t *testing.T) {
 		}
 	}))
 	// create a listener with the desired port.
-	l, err := net.Listen("tcp", registry)
+	l, err := net.Listen("tcp4", registry)
 	if err != nil {
 		t.Errorf("Test_parseFromRegistry() unexpected error while creating listener: %v", err)
 		return
